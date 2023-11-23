@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family:'Amelaryas' ;
+    src: url(./assets/fonts/Amelaryas/AmelaryasPersonalUse-6Ypw1.ttf);
+}
+
+@font-face {
+    font-family:'Amsterdam' ;
+    src: url(./assets/fonts/Amsterdam/Amsterdam.otf);
+}
+
+
+@font-face {
+    font-family: 'Silka';
+    src: url(./assets/fonts/Silka/silka-regularitalic-webfont.ttf);
+}
