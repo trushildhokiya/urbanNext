@@ -1,18 +1,14 @@
-<!-- <div class=" bg-['url(`https://img.freepik.com/free-vector/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping-price-reduction-promotional-coupons-special-holiday-offers-vector-isolated-concept-metaphor-illustration_335657-2766.jpg?w=826&t=st=1700740571~exp=1700741171~hmac=28b9d613242c96e03cb1c65b3560c9f8da509c15377046b1b7628f8fc78dd06e`)'] from-cyan-500 to-blue-500 p-5 ">
-
-    <div class="grid grid-cols-2">
-        <div class="">
-            <p class="text-4xl font-Poppins text-center">
-                Limited Time Hurry Up
-            </p>
-            <p class="my-4 text-2xl">
-                Grab the deal Now!
-            </p>
-        </div>
+<div class="grid md:grid-cols-2 bg-rose-300 place-items-center ">
+    <div class="py-5 my-10">
+        <p class="font-Poppins text-5xl font-semibold">Upto 50% off </p>
+        <p class="my-10 font-Poppins md:font-Amsterdam text-3xl font-semibold">Grab the deal Now</p>
     </div>
-</div> -->
+    <div class="w-[70%] mx-auto">
+        <img src="../../../assets/images/png/deal.png" alt="grab-deal" class="w-[50%] h-auto object-contain" />
+    </div>
+</div>
 
-<div class="container mx-auto my-10">
+<div class="p-2 sm:p-0 container mx-auto my-10">
 
     <div class="flex justify-between items-center">
         <div class="">
@@ -20,45 +16,13 @@
                 Men's Clothing
             </h2>
         </div>
-        <div class="">
-            <a href="#" class="">
-                Explore ->
-            </a>
+        <div class=" cursor-pointer bg-rose-500 p-2 px-3 text-lg text-white font-Poppins rounded-3xl"
+            [routerLink]="['/categories']" routerLinkActive="router-link-active">
+            Explore
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-5 my-4">
-
-        @for ( item of mensClothing; track item){
-            
-            <div class="p-2 rounded-2xl border-2 border-gray-50 shadow-md">
-                <div class="rounded-2xl w-[80%] mx-auto p-1 flex justify-center">
-                    <img src={{item.image}} class="w-full h-[15rem] object-contain"/>
-                </div>
-                <div class="my-2 p-3 text-center sm:text-left">
-                    <p class="font-Poppins text-lg font-semibold">
-                        {{item.title}}
-                    </p>
-                    <p class="text-sm text-gray-500 my-5">
-                        {{item.description.slice(0,150)+'...'}}
-                    </p>
-                </div>
-                <div class="flex p-3 justify-between">
-                    <div class="">
-                        <p class="text-xl font-semibold font-Poppins">
-                            {{item.price | currency:'INR'}}
-                        </p>
-                    </div>
-                    <div class="">
-                        <button class="p-3 bg-emerald-500 text-white font-Silka rounded-xl">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    
+    <app-card [data]="mensClothing"></app-card>
 
 </div>
 
@@ -71,45 +35,13 @@
                 Women's Clothing
             </h2>
         </div>
-        <div class="">
-            <a href="#" class="">
-                Explore ->
-            </a>
+        <div class=" cursor-pointer bg-rose-500 p-2 px-3 text-lg text-white font-Poppins rounded-3xl"
+            [routerLink]="['/categories']" routerLinkActive="router-link-active">
+            Explore
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-5 my-4">
-
-        @for ( item of femaleClothing; track item){
-            
-            <div class="p-2 rounded-2xl border-2 border-gray-50 shadow-md">
-                <div class="rounded-2xl w-[80%] mx-auto p-1 flex justify-center">
-                    <img src={{item.image}} class="w-full h-[15rem] object-contain"/>
-                </div>
-                <div class="my-2 p-3 text-center sm:text-left">
-                    <p class="font-Poppins text-lg font-semibold">
-                        {{item.title}}
-                    </p>
-                    <p class="text-sm text-gray-500 my-5">
-                        {{item.description.slice(0,150)+'...'}}
-                    </p>
-                </div>
-                <div class="flex p-3 justify-between">
-                    <div class="">
-                        <p class="text-xl font-semibold font-Poppins">
-                            {{item.price | currency:'INR'}}
-                        </p>
-                    </div>
-                    <div class="">
-                        <button class="p-3 bg-emerald-500 text-white font-Silka rounded-xl">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    
+    <app-card [data]="femaleClothing"></app-card>
 
 </div>
 
@@ -120,48 +52,16 @@
     <div class="flex justify-between items-center">
         <div class="">
             <h2 class="font-Silka text-3xl">
-                Jewellery's 
+                Jewellery's
             </h2>
         </div>
-        <div class="">
-            <a href="#" class="">
-                Explore ->
-            </a>
+        <div class=" cursor-pointer bg-rose-500 p-2 px-3 text-lg text-white font-Poppins rounded-3xl"
+            [routerLink]="['/categories']" routerLinkActive="router-link-active">
+            Explore
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-5 my-4">
-
-        @for ( item of jewelleryProducts; track item){
-            
-            <div class="p-2 rounded-2xl border-2 border-gray-50 shadow-md">
-                <div class="rounded-2xl w-[80%] mx-auto p-1 flex justify-center">
-                    <img src={{item.image}} class="w-full h-[15rem] object-contain "/>
-                </div>
-                <div class="my-2 p-3 text-center sm:text-left">
-                    <p class="font-Poppins text-lg font-semibold">
-                        {{item.title}}
-                    </p>
-                    <p class="text-sm text-gray-500 my-5">
-                        {{item.description.slice(0,150)+'...'}}
-                    </p>
-                </div>
-                <div class="flex p-3 justify-between">
-                    <div class="">
-                        <p class="text-xl font-semibold font-Poppins">
-                            {{item.price | currency:'INR'}}
-                        </p>
-                    </div>
-                    <div class="">
-                        <button class="p-3 bg-emerald-500 text-white font-Silka rounded-xl">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    
+    <app-card [data]="jewelleryProducts"></app-card>
 
 </div>
 
@@ -175,44 +75,12 @@
                 Electronics
             </h2>
         </div>
-        <div class="">
-            <a href="#" class="">
-                Explore ->
-            </a>
+        <div class=" cursor-pointer bg-rose-500 p-2 px-3 text-lg text-white font-Poppins rounded-3xl"
+            [routerLink]="['/categories']" routerLinkActive="router-link-active">
+            Explore
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-5 my-4">
-
-        @for ( item of electronics; track item){
-            
-            <div class="p-2 rounded-2xl border-2 border-gray-50 shadow-md">
-                <div class="rounded-2xl w-[80%] mx-auto p-1 flex justify-center">
-                    <img src={{item.image}} class="w-full h-[15rem] object-contain"/>
-                </div>
-                <div class="my-2 p-3 text-center sm:text-left">
-                    <p class="font-Poppins text-lg font-semibold">
-                        {{item.title}}
-                    </p>
-                    <p class="text-sm text-gray-500 my-5">
-                        {{item.description.slice(0,150)+'...'}}
-                    </p>
-                </div>
-                <div class="flex p-3 justify-between">
-                    <div class="">
-                        <p class="text-xl font-semibold font-Poppins">
-                            {{item.price | currency:'INR'}}
-                        </p>
-                    </div>
-                    <div class="">
-                        <button class="p-3 bg-emerald-500 text-white font-Silka rounded-xl">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    
+    <app-card [data]="electronics"></app-card>
 
 </div>

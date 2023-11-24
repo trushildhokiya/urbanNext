@@ -5,10 +5,10 @@
         </h1>
     </div>
     <div class="md:flex px-4 hidden ">
-        <a [routerLink]="['']" routerLinkActive="router-link-active" class="mx-5">Home</a>
-        <a [routerLink]="['/categories']" routerLinkActive="router-link-active" class="mx-5">Categories</a>
-        <a [routerLink]="['/about']" routerLinkActive="router-link-active" class="mx-5">About</a>
-        <a [routerLink]="['/cart']" routerLinkActive="router-link-active" class="mx-5"><mat-icon matBadge="0"
+        <a [routerLink]="['']" routerLinkActive="router-link-active" class="mx-5 font-Poppins">Home</a>
+        <a [routerLink]="['/categories']" routerLinkActive="router-link-active" class="mx-5 font-Poppins">Categories</a>
+        <a [routerLink]="['/about']" routerLinkActive="router-link-active" class="mx-5 font-Poppins">About</a>
+        <a [routerLink]="['/cart']" routerLinkActive="router-link-active" class="mx-5 font-Poppins"><mat-icon matBadge="0"
                 matBadgeColor="primary">shopping_cart</mat-icon></a>
     </div>
     <div class="md:hidden flex items-center" (click)="toogleMenu()">
@@ -17,7 +17,7 @@
 </div>
 
 @if (menuOpen){
-<div class="md:hidden">
+<div class="md:hidden font-Poppins">
     <div class="m-5">
 
         <a [routerLink]="['']" routerLinkActive="router-link-active">Home</a>

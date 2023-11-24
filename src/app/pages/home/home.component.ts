@@ -1,11 +1,13 @@
 import { Component,Injectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { CardComponent } from '../../components/card/card.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardComponent,RouterModule, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
