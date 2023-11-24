@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon'
 import { MatBadgeModule} from '@angular/material/badge'
 import { RouterModule } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -16,8 +17,15 @@ export class HeaderComponent {
 
   menuOpen: boolean = false
 
+  count:number  = 0
+
   toogleMenu: Function = ()=>{
     this.menuOpen = !this.menuOpen
+  }
+
+  constructor(cartService:CartService){
+
+    this.count = cartService.getCount()
   }
   
 }

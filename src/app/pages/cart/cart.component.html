@@ -1,1 +1,55 @@
-cart works
+<div class="container mx-auto my-10 p-2 sm:p-0">
+    <div class="">
+        <h2 class="font-Poppins text-3xl text-gray-600">
+            My Cart
+        </h2>
+    </div>
+
+    @for( item of cartItems; track item){
+
+        <div class=" shadow-md rounded-2xl p-2 ">
+            <div class="grid md:grid-cols-5 md:my-10">
+                <div class="mx-auto col-span-2 ">
+                    <img src={{item.image}} class="h-[15rem] w-auto object-cover">
+                </div>
+                <div class="mx-2 col-span-3">
+                    <p class="font-Poppins text-2xl my-2 ">{{item.title}}</p>
+                    <p class="w-fit font-Poppins text-xs p-1 text-white rounded-full bg-emerald-500 px-4 my-2">{{item.category}}</p>
+                    <p class="my-3 font-Poppins text-md leading-6 text-gray-400">{{item.description}}</p>
+                    
+                    <div class="flex justify-between mx-5">
+                        <div class="font-Poppins text-2xl font-semibold">
+                            {{item.price | currency:'INR'}}
+                        </div>
+                        <div class="cursor-pointer bg-rose-400 text-white rounded-2xl shadow-sm p-2 px-3 font-Poppins " (click)="removeItem(item)">
+                            Remove
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    }
+  
+    @empty {
+        <div class="flex flex-col items-center justify-center">
+            <div class="">
+                <img src="../../../assets/images/png/cry.png" class="object-contain" />
+            </div>
+            <div class="font-Poppins text-3xl text-gray-60">
+                Your Cart is Empty 
+            </div>
+        </div>
+    }
+
+    <div class="my-10">
+        <p class="font-Poppins text-3xl font-semibold">
+            Your Order Total is {{orderTotal | currency:'INR'}}
+        </p>
+    </div>
+    <div class="my-10 p-2 px-3 w-32 bg-teal-500 rounded-full cursor-pointer font-Poppins text-xl text-white">
+        Checkout
+    </div>
+
+</div>
