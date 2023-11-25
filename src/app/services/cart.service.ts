@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,12 @@ export class CartService {
 
   cartList:any = []
 
-  constructor() { }
+  constructor(private toastService:ToastrService) {
+
+   }
 
   addToCart: Function = (product:any)=>{
+    this.toastService.success('Item added to cart')
     this.cartList.push(product)
   }
 

@@ -23,7 +23,7 @@ export class HeaderComponent {
     this.menuOpen = !this.menuOpen
   }
 
-  constructor(cartService:CartService){
+  constructor(public cartService:CartService){
 
     this.count = cartService.getCount()
   }
